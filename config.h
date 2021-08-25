@@ -10,27 +10,19 @@
                                 }
 #endif
 
-/*
- * MIDI options
- */
 
-/* enable basic MIDI features:
-   - MIDI notes can be sent when in Music mode is on
-*/
 
-//#define MIDI_BASIC
-/* enable advanced MIDI features:
-   - MIDI notes can be added to the keymap
-   - Octave shift and transpose
-   - Virtual sustain, portamento, and modulation wheel
-   - etc.
-*/
-//#define MIDI_ADVANCED
 
-/* override number of MIDI tone keycodes (each octave adds 12 keycodes and allocates 12 bytes) */
-//#define MIDI_TONE_KEYCODE_OCTAVES 2
+#define MOUSEKEY_DELAY 500
+#define MOUSEKEY_INTERVAL 80
+#define MOUSEKEY_MOVE_DELTA 5
+#define MOUSEKEY_MAX_SPEED 10
+#define MOUSEKEY_TIME_TO_MAX 10
+#define MOUSEKEY_WHEEL_DELAY 300
+#define MOUSEKEY_WHEEL_INTERVAL 200
+#define MOUSEKEY_WHEEL_MAX_SPEED 30
+#define MOUSEKEY_WHEEL_TIME_TO_MAX 40
 
-// Most tactile encoders have detents every 4 stages
 #define ENCODER_RESOLUTION 4
 
 #define UNICODE_SELECTED_MODES UC_LNX
