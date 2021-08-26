@@ -15,27 +15,47 @@ enum planck_keycodes {
 };
 
 enum unicode_names {
-    BANG,
-    IRONY,
-    SNEK,
-    AE,
-    OE,
-    UE,
-    SZ,
-    CRIGHT,
-    EURO
+   BANG,
+   IRONY,
+   SNEK,
+   AE,
+   OE,
+   UE,
+   SZ,
+   CRIGHT,
+   EURO,
+   ROFL,
+   GRIN,
+   ZANY,
+   BEAM,
+   SCREAM,
+   CONF,
+   SEENO,
+   NOPE,
+   HUSHED,
+   POUT
 };
 
 const uint32_t PROGMEM unicode_map[] = {
-    [BANG]  = 0x203D,  // ‽
-    [IRONY] = 0x2E2E,  // ⸮
-    [SNEK]  = 0x1F40D, // 🐍
+    [BANG]=0x203D,  // ‽
+    [IRONY]=0x2E2E,  // ⸮
+    [SNEK]=0x1F40D, // 🐍
     [AE]=0x00E4,
     [OE]=0x00F6,
     [UE]=0x00FC,
     [SZ]=0x00DF,
     [CRIGHT]=0x00A9,
-    [EURO]=0x20AC
+    [EURO]=0x20AC,
+    [ROFL]=0x1F923,
+    [GRIN]=0x1F605,
+    [ZANY]=0x1F92A,
+    [BEAM]=0x1F601,
+    [SCREAM]=0x1F631,
+    [CONF]=0x1F616,
+    [SEENO]=0x1F648,
+    [NOPE]=0x1F641,
+    [HUSHED]=0x1F62F,
+    [POUT]=0x1F621
 };
 
 #define LOWER MO(_LOWER)
@@ -93,10 +113,10 @@ _______,   _______,   _______,   _______,   _______,   _______,   _______,   ___
 
 [_FUNCY1] = LAYOUT_planck_grid(
 
-_______,   _______,   _______,   _______,   _______,   G(KC_GRAVE),KC_BSLS,     _______,   _______,   _______,   _______,   _______,
-_______,   _______,   KC_LPRN,   KC_LCBR,   KC_LBRC,   KC_GRAVE,   G(KC_BSLS),  KC_RBRC,   KC_RCBR,   KC_RPRN,   _______,   _______,
-_______,   _______,   _______,   _______,   KC_LT,     G(KC_EQL),  KC_EQL,      KC_GT,     _______,   _______,   _______,   _______,
-_______,   _______,   _______,   _______,   _______,   KC_MINS,    G(KC_MINS),  _______,   _______,   _______,   _______,   _______
+_______,   _______,   _______,   _______,   _______,   S(KC_GRAVE),KC_BSLS,     _______,   _______,   _______,   _______,   _______,
+_______,   _______,   KC_LPRN,   KC_LCBR,   KC_LBRC,   KC_GRAVE,   S(KC_BSLS),  KC_RBRC,   KC_RCBR,   KC_RPRN,   _______,   _______,
+_______,   _______,   _______,   _______,   KC_LT,     S(KC_EQL),  KC_EQL,      KC_GT,     _______,   _______,   _______,   _______,
+_______,   _______,   _______,   _______,   _______,   KC_MINS,    S(KC_MINS),  _______,   _______,   _______,   _______,   _______
 
 ),
 
@@ -110,9 +130,9 @@ XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   XXXXXXX,   G(KC_PSCR),KC_PSCR,   XXX
 ),
 
 [_FUNCY2] = LAYOUT_planck_grid(
-_______,   X(SNEK),      _______,   X(EURO),   _______,   _______,   _______,   X(UE),     _______,     X(OE),   _______,   _______,
-_______,   X(AE),        X(SZ),     _______,   _______,   _______,   _______,   _______,  _______,   _______,   _______, _______,  
-_______,   X(BANG),      _______,   _______,   _______,   _______,   _______,   _______,   _______,  _______,   _______,   _______, 
+_______,   X(SNEK),      _______,   X(EURO),   _______,   _______,   _______,   X(UE),     X(SCREAM),     X(OE),   X(CONF),   _______,
+_______,   X(AE),        X(SZ),     _______,   _______,   _______,   _______,   X(SEENO),  X(NOPE),   X(HUSHED),   X(POUT), _______,  
+_______,   X(BANG),      _______,   _______,   _______,   _______,   _______,   X(ROFL),  X(GRIN), X(ZANY), X(BEAM),    _______, 
 _______,   X(IRONY),      _______,  X(CRIGHT),   _______,   _______,   _______,   _______,    _______,   _______,   _______,   _______ 
 ),
 
